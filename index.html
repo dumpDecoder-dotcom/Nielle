@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Little World Made for You</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Homemade+Apple&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<div id="floaters" aria-hidden="true"></div>
+
+<!-- 1. THE OPENING -->
+<main id="opening">
+  <p class="hand">Someone has a little surprise for you...</p>
+  <button id="envelope" aria-label="Open the envelope">
+    <span class="e-back"></span>
+    <span class="letter"><b class="hand">Hi, my love.</b><i>I made this little world just for you.</i></span>
+    <span class="e-front"></span>
+    <span class="flap"><span class="seal">❤</span></span>
+  </button>
+  <p class="small">Made with love, just for you.</p>
+  <button id="openGift" class="btn hidden">Let's Open Your Gift</button>
+</main>
+
+<!-- JOURNAL -->
+<div id="journal" class="hidden">
+  <button id="music" class="music" aria-label="Play or pause music">♪</button>
+  <audio id="audio" loop src="assets/music/song.mp3"></audio>
+
+  <header class="page welcome">
+    <h1>Welcome to Our Little World ❤️</h1>
+    <p class="hand">turn the pages slowly, my love...</p>
+    <button class="tiny-heart" data-secret="You found a little heart. I keep one for you right here. 💗">♡</button>
+  </header>
+
+  <section class="page" id="memories">
+    <h2>Our Memory Journal 📸</h2>
+    <div class="polaroids" id="polaroids"></div>
+  </section>
+
+  <section class="page" id="letters">
+    <h2>Letters I Wrote for You 💌</h2>
+    <p class="hand">open them when you need them</p>
+    <div class="envs" id="envs"></div>
+  </section>
+
+  <section class="page" id="reasons">
+    <h2>100 Little Reasons Why I Love You ❤️</h2>
+    <p class="hand">tap a heart</p>
+    <div class="hearts" id="hearts"></div>
+    <button class="flower" data-secret="You are the prettiest flower in every garden. 🌸">🌸</button>
+  </section>
+
+  <section class="page" id="story">
+    <h2>Our Love Story</h2>
+    <div class="timeline" id="timeline"></div>
+    <button class="hidden-letter" id="hiddenLetter" aria-label="A hidden letter">✉</button>
+  </section>
+
+  <section class="page final" id="final">
+    <div class="big-heart" id="bigHeart">❤</div>
+    <p class="quote">If I could give you one thing in this world, it would be the ability to see yourself through my eyes. Only then would you realize how special you are to me.</p>
+    <button class="btn" id="lastBtn">One Last Surprise...</button>
+    <p class="quote reveal hidden" id="lastMsg">Out of all the people in this world, I'm still glad it's you. I would choose you in every lifetime. I love you, always and forever. ❤️</p>
+    <button class="secret-btn" data-secret="Psst... you read all the way down here. I'd read your every page too. 💌">psst</button>
+  </section>
+</div>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card"><button class="close" aria-label="Close">×</button><div id="modalBody"></div></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
