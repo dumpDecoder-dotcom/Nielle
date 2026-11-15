@@ -275,11 +275,7 @@ $("#envs").onclick = (e) => {
   );
 };
 
-$("#hearts").innerHTML = Array.from(
-  { length: 100 },
-  (_, i) =>
-    `<button class="h" data-i="${i}" aria-label="Reason ${i + 1}">❤</button>`,
-).join("");
+$("#hearts").innerHTML=Array.from({length:100},(_,i)=>`<button class="h" data-i="${i}" aria-label="Reason ${i+1}">♥\uFE0E</button>`).join("");
 $("#hearts").onclick = (e) => {
   const b = e.target.closest(".h");
   if (!b) return;
