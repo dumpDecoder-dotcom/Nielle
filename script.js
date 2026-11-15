@@ -1,6 +1,6 @@
 /* ============ EDIT YOUR CONTENT HERE ============ */
 const PHOTOS = [ // img: put files in assets/images/ and write e.g. "assets/images/us1.jpg"
-  {img:"", cap:"The day we met", date:"01 Jan 2024", story:"Write the story of this moment here."},
+  {img:"assets/images/us5.jpg", cap:"The day we met", date:"01 Jan 2024", story:"Write the story of this moment here."},
   {img:"", cap:"Our first picture", date:"14 Feb 2024", story:"Write the story of this moment here."},
   {img:"", cap:"That silly day", date:"20 Apr 2024", story:"Write the story of this moment here."},
   {img:"", cap:"My favorite smile", date:"05 Aug 2024", story:"Write the story of this moment here."},
@@ -60,6 +60,7 @@ $("#envelope").onclick=function(){
   setTimeout(()=>$("#openGift").classList.remove("hidden"),2200);
 };
 $("#openGift").onclick=()=>{
+   audio.play().then(()=>mb.classList.add("on")).catch(()=>{});
   $("#opening").style.cssText="opacity:0;transition:opacity .8s";
   setTimeout(()=>{
     $("#opening").classList.add("hidden"); $("#journal").classList.remove("hidden");
