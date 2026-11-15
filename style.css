@@ -73,7 +73,9 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;border-left:3px dashed var(--rose)}
 .entry{position:relative;background:#fffdf7;padding:1rem 1.2rem;margin-bottom:2rem;box-shadow:2px 3px 8px #0002;transform:rotate(var(--rot))}
 .entry::before{content:"♥";position:absolute;left:-34px;top:12px;color:var(--wine);background:var(--cream);width:22px;text-align:center}
-.entry .ph{aspect-ratio:16/9;margin:.5rem 0}
+.entry .ph{margin:.5rem 0;aspect-ratio:auto}
+.entry .ph:not(:has(img)){aspect-ratio:16/9}
+.entry .ph img{height:auto;object-fit:contain}
 .entry h3{margin:0;font-weight:500;color:var(--wine)}
 
 /* secrets */
@@ -98,7 +100,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .modal-card{position:relative;background:#fffdf7;max-width:520px;width:100%;max-height:88vh;overflow:auto;padding:2rem 1.6rem;border-radius:3px;box-shadow:0 10px 40px #0006;animation:pop .45s}
 @keyframes pop{from{transform:scale(.8) rotate(-3deg);opacity:0}}
 .modal-card h3{margin:0 0 .6rem;color:var(--wine);font-weight:500;font-size:1.6rem}
-.modal-card p,.letter-text{font-family:'Homemade Apple',cursive;font-size:1.05rem;line-height:2}
+.modal-card p,.letter-text{font-family:'Kalam',cursive;font-size:1.15rem;line-height:1.8}
 .close{position:absolute;top:6px;right:12px;font-size:2rem}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.page{opacity:1;transform:none}}
